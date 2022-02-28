@@ -58,9 +58,9 @@ model.add(Dense(1))
 model.compile(optimizer='adam', loss='mean_squared_error', metrics=['accuracy'])
 model.fit(X_train, y_train, epochs=25, batch_size=32, verbose=1)
 
-model.save("Stock Price.h5")
+model.save("Forecast.h5")
 """
-model = keras.models.load_model("Stock Price.h5")
+model = keras.models.load_model("Forecast.h5")
 
 predictions = model.predict(X_test)
 predictions = scaler.inverse_transform(predictions)
